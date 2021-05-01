@@ -109,7 +109,7 @@ function apply_screen_name() {
   loading.profile_image_local_url = "images/loading.png";
   loading.name = "Now Loading...";
   loading.description = "Now Loading...";
-  excute_draw(loading);
+  // excute_draw(loading);
 
   $.get(
       "twitter.json",

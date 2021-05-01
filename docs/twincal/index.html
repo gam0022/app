@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<!-- saved from url=(0036)https://133.130.108.117/app/twincal/ -->
-<html lang="jp"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+<html lang="jp">
+  <head>
+    <meta charset="utf-8">
     <title>TwinCal</title>
-    <script src="./index_files/all.js.ダウンロード" async="" crossorigin="anonymous"></script><script id="facebook-jssdk" src="./index_files/all.js(1).ダウンロード"></script><script id="twitter-wjs" src="./index_files/widgets.js.ダウンロード"></script><script src="./index_files/jquery-2.0.3.min.js.ダウンロード"></script>
-    <script src="./index_files/validation.js.ダウンロード"></script>
-    <link rel="shortcut icon" href="https://133.130.108.117/app/twincal/favicon.png">
+    <script src="js/jquery-2.0.3.min.js"></script>
+    <script src="js/validation.js"></script>
+    <link rel="shortcut icon" href="favicon.png">
 
     <!-- Le styles -->
-    <link href="./index_files/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
     <style>
       body {
         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
@@ -70,14 +70,11 @@
         line-height: 1.5;
       }
     </style>
-    <link href="./index_files/bootstrap-responsive.css" rel="stylesheet">
-  <style type="text/css" data-fbcssmodules="css:fb.css.basecss:fb.css.dialog css:fb.css.iframewidget css:fb.css.customer_chat_plugin_iframe">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, "hiragino kaku gothic pro",meiryo,"ms pgothic",sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
-.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
-.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
-.fb_mpn_mobile_landing_page_slide_out{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_out_from_left{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out_from_left;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_up{animation-duration:500ms;animation-name:fb_mpn_landing_page_slide_up;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_in{animation-duration:300ms;animation-name:fb_mpn_bounce_in;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out{animation-duration:300ms;animation-name:fb_mpn_bounce_out;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out_v2{animation-duration:300ms;animation-name:fb_mpn_fade_out;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_v2{animation-duration:300ms;animation-name:fb_bounce_in_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_from_left{animation-duration:300ms;animation-name:fb_bounce_in_from_left;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_v2{animation-duration:300ms;animation-name:fb_bounce_out_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_from_left{animation-duration:300ms;animation-name:fb_bounce_out_from_left;transition-timing-function:ease-in}.fb_customer_chat_bubble_animated_no_badge{box-shadow:0 3px 12px rgba(0, 0, 0, .15);transition:box-shadow 150ms linear}.fb_customer_chat_bubble_animated_no_badge:hover{box-shadow:0 5px 24px rgba(0, 0, 0, .3)}.fb_customer_chat_bubble_animated_with_badge{box-shadow:-5px 4px 14px rgba(0, 0, 0, .15);transition:box-shadow 150ms linear}.fb_customer_chat_bubble_animated_with_badge:hover{box-shadow:-5px 8px 24px rgba(0, 0, 0, .2)}.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}.fb_new_ui_mobile_overlay_active{overflow:hidden}@keyframes fb_mpn_landing_page_slide_in{0%{border-radius:50%;margin:0 24px;width:60px}40%{border-radius:18px}100%{margin:0 12px;width:100% - 24px}}@keyframes fb_mpn_landing_page_slide_in_from_left{0%{border-radius:50%;left:12px;margin:0 24px;width:60px}40%{border-radius:18px}100%{left:12px;margin:0 12px;width:100% - 24px}}@keyframes fb_mpn_landing_page_slide_out{0%{margin:0 12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;margin:0 24px;width:60px}}@keyframes fb_mpn_landing_page_slide_out_from_left{0%{left:12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;left:12px;width:60px}}@keyframes fb_mpn_landing_page_slide_up{0%{bottom:0;opacity:0}100%{bottom:24px;opacity:1}}@keyframes fb_mpn_bounce_in{0%{opacity:.5;top:100%}100%{opacity:1;top:0}}@keyframes fb_mpn_fade_out{0%{bottom:30px;opacity:1}100%{bottom:0;opacity:0}}@keyframes fb_mpn_bounce_out{0%{opacity:1;top:0}100%{opacity:.5;top:100%}}@keyframes fb_bounce_in_v2{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}50%{transform:scale(1.03, 1.03);transform-origin:bottom right}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}}@keyframes fb_bounce_in_from_left{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}50%{transform:scale(1.03, 1.03);transform-origin:bottom left}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}}@keyframes fb_bounce_out_v2{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}}@keyframes fb_bounce_out_from_left{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}}@keyframes fb_bounce_out_v2_mobile_chat_started{0%{opacity:1;top:0}100%{opacity:0;top:20px}}@keyframes fb_customer_chat_bubble_bounce_in_animation{0%{bottom:6pt;opacity:0;transform:scale(0, 0);transform-origin:center}70%{bottom:18pt;opacity:1;transform:scale(1.2, 1.2)}100%{transform:scale(1, 1)}}@keyframes slideInFromBottom{0%{opacity:.1;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}@keyframes slideInFromBottomDelay{0%{opacity:0;transform:translateY(100%)}97%{opacity:0;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}</style><script charset="utf-8" src="./index_files/horizon_tweet.2bd42981e3af03ce9186a5655508da28.js.ダウンロード"></script><script charset="utf-8" src="./index_files/button.5573c974dc31bbdab5ea7923a0bd5cf3.js.ダウンロード"></script></head>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+  </head>
 
-  <body style="">
-    <div id="closingModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="closingModalLabel" aria-hidden="true" style="display: none;">
+  <body>
+    <div id="closingModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="closingModalLabel" aria-hidden="true">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="closingModalLabel">運営委託とURL変更のお知らせ</h3>
@@ -104,16 +101,16 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="https://133.130.108.117/app/twincal/#">TwinCal</a>
+          <a class="brand" href="#">TwinCal</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li><a href="https://133.130.108.117/app/twincal/#step1">Main</a></li>
-              <li><a href="https://133.130.108.117/app/twincal/#tweets">Tweets</a></li>
-              <li><a href="https://133.130.108.117/app/twincal/#faq">FAQ</a></li>
-              <li><a href="https://133.130.108.117/app/twincal/#attention">Attention</a></li>
-              <li><a href="https://133.130.108.117/app/twincal/#updates">Updates</a></li>
-              <li><a href="https://133.130.108.117/app/twincal/#other">Other</a></li>
-              <li><a href="http://gam0022.net/">Blog</a></li>
+              <li><a href="#step1">Main</a></li>
+              <li><a href="#tweets">Tweets</a></li>
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href="#attention">Attention</a></li>
+              <li><a href="#updates">Updates</a></li>
+              <li><a href="#other">Other</a></li>
+              <li><a href="http://gam0022.net">Blog</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -126,7 +123,7 @@
         <h1>TwinCal</h1>
         <p class="lead">Twinsの履修情報から、Googleカレンダー・iCalの時間割を作成するWebサービスです。</p>
         <p class="lead">KdBから、教室番号、単位数、科目番号などを自動的に取得します。</p>
-        <a class="btn btn-large btn-success" href="https://133.130.108.117/app/twincal/#step1">Get started</a>
+        <a class="btn btn-large btn-success" href="#step1">Get started</a>
       </div>
 
       <!--div class="well" id="info" style="max-width:600px;margin: 0 auto;">
@@ -147,20 +144,20 @@
       <div class="row">
         <div class="span3">
           <h3><small>1.1</small> Twinsにログイン</h3>
-          <img src="./index_files/step1-1.png">
-          <p><a class="btn" href="https://twins.tsukuba.ac.jp/">Twins »</a></p>
+          <img src="img/step1-1.png">
+          <p><a class="btn" href="https://twins.tsukuba.ac.jp">Twins &raquo;</a></p>
         </div>
         <div class="span3">
           <h3><small>1.2</small> 履修登録・登録状況照会</h3>
-          <img src="./index_files/step1-2.png">
+          <img src="img/step1-2.png">
         </div>
         <div class="span3">
           <h3><small>1.3</small> ダウンロード</h3>
-          <img src="./index_files/step1-3.png">
+          <img src="img/step1-3.png">
         </div>
         <div class="span3">
           <h3><small>1.4</small> 出力</h3>
-          <img src="./index_files/step1-4.png">
+          <img src="img/step1-4.png">
         </div>
       </div>
     </section>
@@ -172,13 +169,13 @@
       <div class="row">
         <div class="span12">
           <p><strong>下のフォームに</strong>Step1でダウンロードしたCSVを指定してください。</p>
-          <form method="post" action="https://133.130.108.117/app/twincal/parse.rb" class="well form-inline" id="form1" enctype="multipart/form-data">
+          <form method="post" action="parse.rb" class="well form-inline" id="form1" enctype="multipart/form-data">
             
 
             <input type="file" id="file" name="file" style="display: none;" class="validate required input-file">
             <div class="input-prepend">
-              <a class="btn" onclick="$(&#39;#file&#39;).click();"><i class="icon-folder-open"></i></a>
-              <span id="cover" class="input-xlarge uneditable-input" onclick="$(&#39;#file&#39;).click();"></span>
+              <a class="btn" onclick="$('#file').click();"><i class="icon-folder-open"></i></a>
+              <span id="cover" class="input-xlarge uneditable-input" onclick="$('#file').click();"></span>
             </div>
             <button type="submit" class="btn btn-primary btn-large" id="submit">Submit</button>
             <script type="text/javascript">
@@ -198,7 +195,7 @@
       <div class="row">
         <div class="span6">
           <h2>Googleカレンダーの場合</h2>
-          <img src="./index_files/step3-1.png">
+          <img src="img/step3-1.png">
           <ol>
             <li>「カレンダー設定 &gt; カレンダー」に行く。</li>
             <li>「新しいカレンダーの作成」をする。</li>
@@ -207,8 +204,8 @@
         </div>
         <div class="span6">
           <h2>iCalの場合</h2>
-          <img src="./index_files/step3-2.png">
-          <img src="./index_files/step3-3.png">
+          <img src="img/step3-2.png">
+          <img src="img/step3-3.png">
           <ol>
             <li>メニューから「ファイル &gt; 読み込む &gt; 読み込む」。</li>
             <li>ダウンロードした.icsファイルを選択。</li>
@@ -216,7 +213,7 @@
           </ol>
         </div>
         <div class="span12 alert alert-info">
-          <a class="close" data-dismiss="alert" href="https://133.130.108.117/app/twincal/#">×</a>
+          <a class="close" data-dismiss="alert" href="#">×</a>
           <h4 class="alert-heading">Hint</h4>
           <span>何か不具合が起きるかもしれないので、新規作成したカレンダーにインポートすることを推奨します。</span>
         </div>
@@ -232,134 +229,128 @@
 
       <div class="row">
         <div class="span6">
-          <div class="twitter-tweet twitter-tweet-rendered" style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;"><iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 550px; height: 193px; display: block; flex-grow: 1;" title="Twitter Tweet" src="./index_files/Tweet.html" data-tweet-id="385210270567505920"></iframe></div>
+          <blockquote class="twitter-tweet"><p>新学期で教室がわからないみなさん、TwinCalをつかいましょう！！！！</p>&mdash; Yuji (@yuji_tsukuba) <a href="https://twitter.com/yuji_tsukuba/statuses/385210270567505920">October 2, 2013</a></blockquote>
 
-          <div class="twitter-tweet twitter-tweet-rendered" style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;"><iframe id="twitter-widget-1" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 550px; height: 720px; display: block; flex-grow: 1;" title="Twitter Tweet" src="./index_files/Tweet(1).html" data-tweet-id="385211624178466816"></iframe></div>
+          <blockquote class="twitter-tweet"><p>TwinCalを使えば、こんなカレンダーがPCやスマホで見れるようになりますよ &#39;ω&#39; <a href="http://t.co/JZZmVXtyOt">pic.twitter.com/JZZmVXtyOt</a></p>&mdash; Yuji (@yuji_tsukuba) <a href="https://twitter.com/yuji_tsukuba/statuses/385211624178466816">October 2, 2013</a></blockquote>
 
-          <div class="twitter-tweet twitter-tweet-rendered" style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;"><iframe id="twitter-widget-2" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 550px; height: 513px; display: block; flex-grow: 1;" title="Twitter Tweet" src="./index_files/Tweet(2).html" data-tweet-id="385211814155259904"></iframe></div>
+          <blockquote class="twitter-tweet"><p>先生の名前や単位数まで分かる <a href="http://t.co/jJHSqLblAr">pic.twitter.com/jJHSqLblAr</a></p>&mdash; Yuji (@yuji_tsukuba) <a href="https://twitter.com/yuji_tsukuba/statuses/385211814155259904">October 2, 2013</a></blockquote>
 
-          <blockquote class="twitter-tweet" data-twitter-extracted-i1619883192843824806="true"><p>TwinCalめっちゃ良い。 大学院の授業も対応できてて優秀だ。 但し、月曜祝日とかの振替までは対応してない模様。<a href="https://twitter.com/gam0022">@gam0022</a></p>— あおみかん (@AknEp) <a href="https://twitter.com/AknEp/statuses/383056092432855040">September 26, 2013</a></blockquote>
-          <script async="" src="./index_files/widgets.js.ダウンロード" charset="utf-8"></script>
+          <blockquote class="twitter-tweet"><p>TwinCalめっちゃ良い。 大学院の授業も対応できてて優秀だ。 但し、月曜祝日とかの振替までは対応してない模様。<a href="https://twitter.com/gam0022">@gam0022</a></p>&mdash; あおみかん (@AknEp) <a href="https://twitter.com/AknEp/statuses/383056092432855040">September 26, 2013</a></blockquote>
+          <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-          <div class="twitter-tweet twitter-tweet-rendered" style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;"><iframe id="twitter-widget-4" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 550px; height: 193px; display: block; flex-grow: 1;" title="Twitter Tweet" src="./index_files/Tweet(3).html" data-tweet-id="384516951604617218"></iframe></div>
+          <blockquote class="twitter-tweet"><p>Twincal使ってみた。これで開設科目一覧から教室を一々調べ上げる手間がいらなくなったんや...！（感涙）</p>&mdash; もねさん (@Moneto_Tk) <a href="https://twitter.com/Moneto_Tk/statuses/384516951604617218">September 30, 2013</a></blockquote>
 
-          <div class="twitter-tweet twitter-tweet-rendered" style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;"><iframe id="twitter-widget-5" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 550px; height: 239px; display: block; flex-grow: 1;" title="Twitter Tweet" src="./index_files/Tweet(4).html" data-tweet-id="384678165483769857"></iframe></div>
+          <blockquote class="twitter-tweet"><p>TwinsからGoogleカレンダーやiCalの時間割を作るWebサービス「TwinCal」。教室番号や単位数をkDBから自動取得。 <a href="http://t.co/O9eAdDWrov">http://t.co/O9eAdDWrov</a> <a href="https://twitter.com/search?q=%23twincal&amp;src=hash">#twincal</a> <a href="https://twitter.com/gam0022">@gam0022</a>さんから これが便利すぎてヤバい</p>&mdash; だいちび@いわしお (@DaichiBee) <a href="https://twitter.com/DaichiBee/statuses/384678165483769857">September 30, 2013</a></blockquote>
 
-          <div class="twitter-tweet twitter-tweet-rendered" style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;"><iframe id="twitter-widget-6" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 550px; height: 170px; display: block; flex-grow: 1;" title="Twitter Tweet" src="./index_files/Tweet(5).html" data-tweet-id="239008164635357184"></iframe></div>
+          <blockquote class="twitter-tweet"><p>TwinCal ｲｲﾈ！<a href="http://t.co/MFY2Yy04">http://t.co/MFY2Yy04</a></p>&mdash; こにたｎ@笛と伴奏の人 (@Koni_1st) <a href="https://twitter.com/Koni_1st/statuses/239008164635357184">August 24, 2012</a></blockquote>
 
-          <div class="twitter-tweet twitter-tweet-rendered" style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;"><iframe id="twitter-widget-7" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 550px; height: 193px; display: block; flex-grow: 1;" title="Twitter Tweet" src="./index_files/Tweet(6).html" data-tweet-id="241537405201555458"></iframe></div>
+          <blockquote class="twitter-tweet"><p>.<a href="https://twitter.com/gam0022">@gam0022</a> の本気 Twins を iCal 形式に変換 -&gt; TwinCal: <a href="http://t.co/Bl3fDJdF">http://t.co/Bl3fDJdF</a> <a href="https://twitter.com/search?q=%23zdkinfo&amp;src=hash">#zdkinfo</a></p>&mdash; Hirotaka Kawata /てくの (@hktechno) <a href="https://twitter.com/hktechno/statuses/241537405201555458">August 31, 2012</a></blockquote>
 
-          <div class="twitter-tweet twitter-tweet-rendered" style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;"><iframe id="twitter-widget-8" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 550px; height: 216px; display: block; flex-grow: 1;" title="Twitter Tweet" src="./index_files/Tweet(7).html" data-tweet-id="241537518007382016"></iframe></div>
+          <blockquote class="twitter-tweet"><p>あ、すごい、これ便利そう。情報委の <a href="https://twitter.com/gam0022">@gam0022</a>がつくったTwinsの授業割をiCal形式に変換できるサービス（今授業ないから意味ないけど。【TwinCal】<a href="http://t.co/7So5zgRe">http://t.co/7So5zgRe</a></p>&mdash; ものくろ (@monoqlo) <a href="https://twitter.com/monoqlo/statuses/241537518007382016">August 31, 2012</a></blockquote>
 
-          <div class="twitter-tweet twitter-tweet-rendered" style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;"><iframe id="twitter-widget-9" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 550px; height: 193px; display: block; flex-grow: 1;" title="Twitter Tweet" src="./index_files/Tweet(8).html" data-tweet-id="242215523071451136"></iframe></div>
+          <blockquote class="twitter-tweet"><p>さっきの時間割はこれ利用しました☆（ゝω・）vｷｬﾋﾟ <a href="http://t.co/EVBX4l2D">http://t.co/EVBX4l2D</a></p>&mdash; シュン (@shun_1218) <a href="https://twitter.com/shun_1218/statuses/242215523071451136">September 2, 2012</a></blockquote>
 
-          <div class="twitter-tweet twitter-tweet-rendered" style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;"><iframe id="twitter-widget-10" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 550px; height: 193px; display: block; flex-grow: 1;" title="Twitter Tweet" src="./index_files/Tweet(9).html" data-tweet-id="247953121140174848"></iframe></div>
+          <blockquote class="twitter-tweet"><p>TWINSの予定をGoogle Calenderに流しこむ際の便利ツール捕捉。 <a href="http://t.co/1juo0HUP">http://t.co/1juo0HUP</a></p>&mdash; Sota SAITO(あなわーる) (@anoworl) <a href="https://twitter.com/anoworl/statuses/247953121140174848">September 18, 2012</a></blockquote>
 
           <!--blockquote class="twitter-tweet"><p>個人情報に関する記述が見当たらないのが気になるけど使ってみたらめっちゃ便利ですた。 - TwinCal <a href="http://t.co/mwYeKEGi">http://t.co/mwYeKEGi</a> <a href="https://twitter.com/search?q=%23miteru&amp;src=hash">#miteru</a></p>&mdash; りせっしゅ (@resessh8) <a href="https://twitter.com/resessh8/statuses/277993388366766082">December 10, 2012</a></blockquote-->
 
-          <div class="twitter-tweet twitter-tweet-rendered" style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;"><iframe id="twitter-widget-11" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 550px; height: 216px; display: block; flex-grow: 1;" title="Twitter Tweet" src="./index_files/Tweet(10).html" data-tweet-id="278501409798901760"></iframe></div>
+          <blockquote class="twitter-tweet"><p>&quot;TwinCalとは、Twinsの時間割をiCalendar形式に変換し、 Googleカレンダー・iCalへのインポートをサポートするWebサービスです。&quot; - TwinCal <a href="http://t.co/It045YyJ">http://t.co/It045YyJ</a> <a href="https://twitter.com/search?q=%23miteru&amp;src=hash">#miteru</a></p>&mdash; Shinnosuke TAKEDA (@cnosuke) <a href="https://twitter.com/cnosuke/statuses/278501409798901760">December 11, 2012</a></blockquote>
 
-          <blockquote class="twitter-tweet" data-twitter-extracted-i1619883192843824806="true"><p>素晴らしい RT <a href="https://twitter.com/gam0022">@gam0022</a>: Twinsの履修情報をGoogleカレンダーなどにエクスポートするアプリを作りました。 <a href="http://t.co/qSpoZTEtUI">http://t.co/qSpoZTEtUI</a> <a href="https://twitter.com/search?q=%23twincal&amp;src=hash">#twincal</a></p>— もちょい (@mobasic) <a href="https://twitter.com/mobasic/statuses/325239794466701312">April 19, 2013</a></blockquote>
+          <blockquote class="twitter-tweet"><p>素晴らしい RT <a href="https://twitter.com/gam0022">@gam0022</a>: Twinsの履修情報をGoogleカレンダーなどにエクスポートするアプリを作りました。 <a href="http://t.co/qSpoZTEtUI">http://t.co/qSpoZTEtUI</a> <a href="https://twitter.com/search?q=%23twincal&amp;src=hash">#twincal</a></p>&mdash; もちょい (@mobasic) <a href="https://twitter.com/mobasic/statuses/325239794466701312">April 19, 2013</a></blockquote>
 
-          <div class="twitter-tweet twitter-tweet-rendered" style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;"><iframe id="twitter-widget-13" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 550px; height: 170px; display: block; flex-grow: 1;" title="Twitter Tweet" src="./index_files/Tweet(11).html" data-tweet-id="384671916302139392"></iframe></div>
+          <blockquote class="twitter-tweet"><p>twincal神かな？</p>&mdash; ざんよー (@zanyou_tsukuba) <a href="https://twitter.com/zanyou_tsukuba/statuses/384671916302139392">September 30, 2013</a></blockquote>
 
-          <blockquote class="twitter-tweet" data-twitter-extracted-i1619883192843824806="true"><p>TwinCal便利すぎて泣ける</p>— 白亜の吟遊詩人ミッチー (@mikkun0124_b) <a href="https://twitter.com/mikkun0124_b/statuses/389968298710155264">October 15, 2013</a></blockquote>
+          <blockquote class="twitter-tweet"><p>TwinCal便利すぎて泣ける</p>&mdash; 白亜の吟遊詩人ミッチー (@mikkun0124_b) <a href="https://twitter.com/mikkun0124_b/statuses/389968298710155264">October 15, 2013</a></blockquote>
 
-          <div class="twitter-tweet twitter-tweet-rendered" style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;"><iframe id="twitter-widget-15" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 550px; height: 239px; display: block; flex-grow: 1;" title="Twitter Tweet" src="./index_files/Tweet(12).html" data-tweet-id="408069066927009792"></iframe></div>
+          <blockquote class="twitter-tweet" lang="ja"><p>学生のときにほしかった / TwinsからGoogleカレンダーやiCalの時間割を作るWebサービス「TwinCal」。教室番号や単位数をKdBから自動取得。 <a href="http://t.co/zZJ93zXaVt">http://t.co/zZJ93zXaVt</a> <a href="https://twitter.com/search?q=%23twincal&amp;src=hash">#twincal</a></p>&mdash; ishkawa (@_ishkawa) <a href="https://twitter.com/_ishkawa/statuses/408069066927009792">2013, 12月 4</a></blockquote>
 
-          <div class="twitter-tweet twitter-tweet-rendered" style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;"><iframe id="twitter-widget-16" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 550px; height: 193px; display: block; flex-grow: 1;" title="Twitter Tweet" src="./index_files/Tweet(13).html" data-tweet-id="454288771286966272"></iframe></div>
+          <blockquote class="twitter-tweet" lang="ja"><p>Twincal, 非常に良い (Google カレンダーが埋まったのを見て悲しくなった)</p>&mdash; おしょーゆ (スク水ニーソ女子小学生) (@0x_osyoyu) <a href="https://twitter.com/0x_osyoyu/statuses/454288771286966272">April 10, 2014</a></blockquote>
 
-          <blockquote class="twitter-tweet" lang="ja" data-twitter-extracted-i1619883192843824806="true"><p>Twincalでで予定をGcalへぶっこんだ</p>— すごいあじくんみんなでおごろう (@sadi_gear) <a href="https://twitter.com/sadi_gear/statuses/454288527333666817">April 10, 2014</a></blockquote>
+          <blockquote class="twitter-tweet" lang="ja"><p>Twincalでで予定をGcalへぶっこんだ</p>&mdash; すごいあじくんみんなでおごろう (@sadi_gear) <a href="https://twitter.com/sadi_gear/statuses/454288527333666817">April 10, 2014</a></blockquote>
 
-          <div class="twitter-tweet twitter-tweet-rendered" style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;"><iframe id="twitter-widget-18" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 550px; height: 170px; display: block; flex-grow: 1;" title="Twitter Tweet" src="./index_files/Tweet(14).html" data-tweet-id="454280285887016961"></iframe></div>
+          <blockquote class="twitter-tweet" lang="ja"><p><a href="https://twitter.com/Itsuki_sensei">@Itsuki_sensei</a> twincalすごくないすか！</p>&mdash; こふすけ (@kikukoooo) <a href="https://twitter.com/kikukoooo/statuses/454280285887016961">April 10, 2014</a></blockquote>
 
-          <blockquote class="twitter-tweet" lang="ja" data-twitter-extracted-i1619883192843824806="true"><p>さてさて、TwinCalちゃんを使うかね</p>— こにたn＠tkb (@Koni_2nd) <a href="https://twitter.com/Koni_2nd/statuses/454269507444301824">April 10, 2014</a></blockquote>
+          <blockquote class="twitter-tweet" lang="ja"><p>さてさて、TwinCalちゃんを使うかね</p>&mdash; こにたn＠tkb (@Koni_2nd) <a href="https://twitter.com/Koni_2nd/statuses/454269507444301824">April 10, 2014</a></blockquote>
 
-          <blockquote class="twitter-tweet" lang="ja" data-twitter-extracted-i1619883192843824806="true"><p>とりあえずtwincalで授業登録した</p>— がーしー (@GaaaaaSiiiii) <a href="https://twitter.com/GaaaaaSiiiii/statuses/454257860533166080">April 10, 2014</a></blockquote>
+          <blockquote class="twitter-tweet" lang="ja"><p>とりあえずtwincalで授業登録した</p>&mdash; がーしー (@GaaaaaSiiiii) <a href="https://twitter.com/GaaaaaSiiiii/statuses/454257860533166080">April 10, 2014</a></blockquote>
 
-          <blockquote class="twitter-tweet" lang="ja" data-twitter-extracted-i1619883192843824806="true"><p>twincal感動((遅い</p>— みぞ@ハンネ迷走中 (@loosesummer) <a href="https://twitter.com/loosesummer/statuses/455280301632004096">April 13, 2014</a></blockquote>
+          <blockquote class="twitter-tweet" lang="ja"><p>twincal感動((遅い</p>&mdash; みぞ@ハンネ迷走中 (@loosesummer) <a href="https://twitter.com/loosesummer/statuses/455280301632004096">April 13, 2014</a></blockquote>
 
-          <div class="twitter-tweet twitter-tweet-rendered" style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;"><iframe id="twitter-widget-22" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 550px; height: 170px; display: block; flex-grow: 1;" title="Twitter Tweet" src="./index_files/Tweet(15).html" data-tweet-id="455006762429472768"></iframe></div>
+          <blockquote class="twitter-tweet" lang="ja"><p>Twincal便利！coinsの先輩ありがとう</p>&mdash; 磁石sn (@shimpe6) <a href="https://twitter.com/shimpe6/statuses/455006762429472768">April 12, 2014</a></blockquote>
 
-          <div class="twitter-tweet twitter-tweet-rendered" style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;"><iframe id="twitter-widget-23" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 550px; height: 170px; display: block; flex-grow: 1;" title="Twitter Tweet" src="./index_files/Tweet(16).html" data-tweet-id="454642669956780032"></iframe></div>
+          <blockquote class="twitter-tweet" lang="ja"><p>twincal使いやすい</p>&mdash; せーごー (@shihao18) <a href="https://twitter.com/shihao18/statuses/454642669956780032">April 11, 2014</a></blockquote>
 
-          <blockquote class="twitter-tweet" lang="ja" data-twitter-extracted-i1619883192843824806="true"><p>TwinCalできたきがする</p>— ちゃんゆの@キャベツbot (@YU_know22) <a href="https://twitter.com/YU_know22/statuses/454541919289217024">April 11, 2014</a></blockquote>
+          <blockquote class="twitter-tweet" lang="ja"><p>TwinCalできたきがする</p>&mdash; ちゃんゆの@キャベツbot (@YU_know22) <a href="https://twitter.com/YU_know22/statuses/454541919289217024">April 11, 2014</a></blockquote>
 
-          <div class="twitter-tweet twitter-tweet-rendered" style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;"><iframe id="twitter-widget-25" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 550px; height: 170px; display: block; flex-grow: 1;" title="Twitter Tweet" src="./index_files/Tweet(17).html" data-tweet-id="454538637879693312"></iframe></div>
+          <blockquote class="twitter-tweet" lang="ja"><p>twincalいいぞ～</p>&mdash; enough (@made_up_123) <a href="https://twitter.com/made_up_123/statuses/454538637879693312">April 11, 2014</a></blockquote>
 
-          <blockquote class="twitter-tweet" lang="ja" data-twitter-extracted-i1619883192843824806="true"><p>TwinCal授業の場所も登録してくれるから便利</p>— キー (@kisk0803) <a href="https://twitter.com/kisk0803/statuses/455316447363756032">April 13, 2014</a></blockquote>
+          <blockquote class="twitter-tweet" lang="ja"><p>TwinCal授業の場所も登録してくれるから便利</p>&mdash; キー (@kisk0803) <a href="https://twitter.com/kisk0803/statuses/455316447363756032">April 13, 2014</a></blockquote>
 
-          <blockquote class="twitter-tweet" lang="ja" data-twitter-extracted-i1619883192843824806="true"><p>twincal導入した(今更)</p>— せきもりこ (@axelerator322) <a href="https://twitter.com/axelerator322/statuses/458837356582154241">2014, 4月 23</a></blockquote>
+          <blockquote class="twitter-tweet" lang="ja"><p>twincal導入した(今更)</p>&mdash; せきもりこ (@axelerator322) <a href="https://twitter.com/axelerator322/statuses/458837356582154241">2014, 4月 23</a></blockquote>
 
         </div>
 
         <div class="span6">
-          <div class="twitter-tweet twitter-tweet-rendered" style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;"><iframe id="twitter-widget-28" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 550px; height: 293px; display: block; flex-grow: 1;" title="Twitter Tweet" src="./index_files/Tweet(18).html" data-tweet-id="384679953532338176"></iframe></div>
+          <blockquote class="twitter-tweet"><p><a href="https://twitter.com/T_K_unknown">@T_K_unknown</a> 科目データベースから情報引っ張ってきてGoogleカレンダーに教室とか時間とか入れてくれるすぐれものアプリ。 <a href="http://t.co/K2V5m5BeDM">http://t.co/K2V5m5BeDM</a></p>&mdash; ざんよー (@zanyou_tsukuba) <a href="https://twitter.com/zanyou_tsukuba/statuses/384679953532338176">September 30, 2013</a></blockquote>
 
 
-          <div class="twitter-tweet twitter-tweet-rendered" style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;"><iframe id="twitter-widget-29" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 550px; height: 239px; display: block; flex-grow: 1;" title="Twitter Tweet" src="./index_files/Tweet(19).html" data-tweet-id="384680403748917248"></iframe></div>
+          <blockquote class="twitter-tweet"><p>明日から授業なのに教室調べてない人におすすめ。 TwinsからGoogleカレンダーやiCalの時間割を作るWebサービス「TwinCal」。教室番号や単位数をkDBから自動取得。 <a href="http://t.co/K2V5m5BeDM">http://t.co/K2V5m5BeDM</a> <a href="https://twitter.com/search?q=%23twincal&amp;src=hash">#twincal</a></p>&mdash; ざんよー (@zanyou_tsukuba) <a href="https://twitter.com/zanyou_tsukuba/statuses/384680403748917248">September 30, 2013</a></blockquote>
 
-          <blockquote class="twitter-tweet" data-twitter-extracted-i1619883192843824806="true"><p>twincal確かに便利だなーすごい</p>— フジケン (@photolife23kf) <a href="https://twitter.com/photolife23kf/statuses/384683234912505856">September 30, 2013</a></blockquote>
+          <blockquote class="twitter-tweet"><p>twincal確かに便利だなーすごい</p>&mdash; フジケン (@photolife23kf) <a href="https://twitter.com/photolife23kf/statuses/384683234912505856">September 30, 2013</a></blockquote>
 
-          <blockquote class="twitter-tweet" data-twitter-extracted-i1619883192843824806="true"><p>TwinsからGoogleカレンダーやiCalの時間割を作るWebサービス「TwinCal」。教室番号や単位数をkDBから自動取得。 <a href="http://t.co/mpDphXYvHD">http://t.co/mpDphXYvHD</a> <a href="https://twitter.com/search?q=%23twincal&amp;src=hash">#twincal</a></p>— ひらた (@psephopaiktes6) <a href="https://twitter.com/psephopaiktes6/statuses/384908074604982273">October 1, 2013</a></blockquote>
+          <blockquote class="twitter-tweet"><p>TwinsからGoogleカレンダーやiCalの時間割を作るWebサービス「TwinCal」。教室番号や単位数をkDBから自動取得。 <a href="http://t.co/mpDphXYvHD">http://t.co/mpDphXYvHD</a> <a href="https://twitter.com/search?q=%23twincal&amp;src=hash">#twincal</a></p>&mdash; ひらた (@psephopaiktes6) <a href="https://twitter.com/psephopaiktes6/statuses/384908074604982273">October 1, 2013</a></blockquote>
 
-          <div class="twitter-tweet twitter-tweet-rendered" style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;"><iframe id="twitter-widget-32" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 550px; height: 223px; display: block; flex-grow: 1;" title="Twitter Tweet" src="./index_files/Tweet(20).html" data-tweet-id="384502559848669185"></iframe></div>
+          <blockquote class="twitter-tweet"><p>TwinCalで秋学期の時間割をiCalにぶち込んだ。鬼便利すぎる。 <a href="http://t.co/1zyULmZsdE">http://t.co/1zyULmZsdE</a> <a href="https://twitter.com/search?q=%23%E3%82%B9%E3%83%86%E3%83%AB%E3%82%B9%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;src=hash">#ステルスマーケティング</a></p>&mdash; resessh (@resessh7) <a href="https://twitter.com/resessh7/statuses/384502559848669185">September 30, 2013</a></blockquote>
 
-          <div class="twitter-tweet twitter-tweet-rendered" style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;"><iframe id="twitter-widget-33" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 550px; height: 285px; display: block; flex-grow: 1;" title="Twitter Tweet" src="./index_files/Tweet(21).html" data-tweet-id="326001713024741376"></iframe></div>
+          <blockquote class="twitter-tweet"><p><a href="https://twitter.com/gam0022">@gam0022</a> Twincal使用させて頂きました。非常に便利なアプリで助かりました。現時点で振替授業への対応は行われていないようなのですが、今後実装する予定などございますでしょうか。&#10;振替授業の日程は学年暦にて公開されています。 &#10;<a href="http://t.co/iEBBuEoYoh">http://t.co/iEBBuEoYoh</a></p>&mdash; 田井中海人 from STAR☆ANIS (@tainakanchu) <a href="https://twitter.com/tainakanchu/statuses/326001713024741376">April 21, 2013</a></blockquote>
 
-          <div class="twitter-tweet twitter-tweet-rendered" style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;"><iframe id="twitter-widget-34" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 550px; height: 170px; display: block; flex-grow: 1;" title="Twitter Tweet" src="./index_files/Tweet(22).html" data-tweet-id="326006162166259712"></iframe></div>
+          <blockquote class="twitter-tweet"><p>TwinCal神サービスだった</p>&mdash; linerlock (@linerlock) <a href="https://twitter.com/linerlock/statuses/326006162166259712">April 21, 2013</a></blockquote>
 
-          <div class="twitter-tweet twitter-tweet-rendered" style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;"><iframe id="twitter-widget-35" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 550px; height: 223px; display: block; flex-grow: 1;" title="Twitter Tweet" src="./index_files/Tweet(23).html" data-tweet-id="348698835972927488"></iframe></div>
+          <blockquote class="twitter-tweet"><p>TwinCal シラバスへのリンクも出力されないかなとか思ったけど，ほとんどの学類はKDBへのリンクしか貼ってないんだな…</p>&mdash; kazu@ｷﾘﾝｻﾝ!! (@kazuzac) <a href="https://twitter.com/kazuzac/statuses/348698835972927488">June 23, 2013</a></blockquote>
 
-          <div class="twitter-tweet twitter-tweet-rendered" style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;"><iframe id="twitter-widget-36" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 550px; height: 262px; display: block; flex-grow: 1;" title="Twitter Tweet" src="./index_files/Tweet(24).html" data-tweet-id="352083099414302720"></iframe></div>
+          <blockquote class="twitter-tweet"><p>【新学期】TWINSでの履修情報から，iCal形式のカレンダーを自動生成するWebサービス <a href="http://t.co/mmpQo4IE30">http://t.co/mmpQo4IE30</a> 【TwinCal】&#10;PC，スマホの各カレンダーアプリ等にそのままインポートできますよ！&#10;授業の場所、先生の名前、単位数まで載ってます！</p>&mdash; Yuji (@yuji_tsukuba) <a href="https://twitter.com/yuji_tsukuba/statuses/352083099414302720">July 2, 2013</a></blockquote>
 
-          <blockquote class="twitter-tweet" data-twitter-extracted-i1619883192843824806="true"><p>Twinsに登録した時間割をGoogleカレンダーやiCalにインポートするWebサービス「TwinCal」 <a href="http://t.co/azAOfr6ezX">http://t.co/azAOfr6ezX</a> <a href="https://twitter.com/search?q=%23twincal&amp;src=hash">#twincal</a> 試しにやってみたけど、これ使えるべ。</p>— ふぁっきゅーきなこChan (@edamamekinako) <a href="https://twitter.com/edamamekinako/statuses/352583148648931328">July 4, 2013</a></blockquote>
+          <blockquote class="twitter-tweet"><p>Twinsに登録した時間割をGoogleカレンダーやiCalにインポートするWebサービス「TwinCal」 <a href="http://t.co/azAOfr6ezX">http://t.co/azAOfr6ezX</a> <a href="https://twitter.com/search?q=%23twincal&amp;src=hash">#twincal</a> 試しにやってみたけど、これ使えるべ。</p>&mdash; ふぁっきゅーきなこChan (@edamamekinako) <a href="https://twitter.com/edamamekinako/statuses/352583148648931328">July 4, 2013</a></blockquote>
 
-          <div class="twitter-tweet twitter-tweet-rendered" style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;"><iframe id="twitter-widget-38" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 550px; height: 216px; display: block; flex-grow: 1;" title="Twitter Tweet" src="./index_files/Tweet(25).html" data-tweet-id="241537932408803328"></iframe></div>
+          <blockquote class="twitter-tweet"><p>.<a href="https://twitter.com/gam0022">@gam0022</a>が作ったTwinsの時間割をiCalendar形式に変換するアプリ（｀・ω・´） 【twincal】 <a href="http://t.co/cD7y5ssj">http://t.co/cD7y5ssj</a></p>&mdash; ちょこぷよ(氷点の足戦士) (@chocopuyo) <a href="https://twitter.com/chocopuyo/statuses/241537932408803328">August 31, 2012</a></blockquote>
 
-          <div class="twitter-tweet twitter-tweet-rendered" style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;"><iframe id="twitter-widget-39" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 550px; height: 170px; display: block; flex-grow: 1;" title="Twitter Tweet" src="./index_files/Tweet(26).html" data-tweet-id="325836183894638592"></iframe></div>
+          <blockquote class="twitter-tweet"><p>gam0022++</p>&mdash; 吉村　優 (@_yyu_) <a href="https://twitter.com/_yyu_/statuses/325836183894638592">April 21, 2013</a></blockquote>
 
-          <div class="twitter-tweet twitter-tweet-rendered" style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;"><iframe id="twitter-widget-40" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 550px; height: 216px; display: block; flex-grow: 1;" title="Twitter Tweet" src="./index_files/Tweet(27).html" data-tweet-id="325998090656043010"></iframe></div>
+          <blockquote class="twitter-tweet"><p>Twinsに登録した時間割をGoogleカレンダーやiCalにインポートするWebサービス「TwinCal」 <a href="http://t.co/8b8pjg3SVj">http://t.co/8b8pjg3SVj</a> <a href="https://twitter.com/search?q=%23twincal&amp;src=hash">#twincal</a> <a href="https://twitter.com/gam0022">@gam0022</a>さんから</p>&mdash; HALTMAN (@c_plus_c) <a href="https://twitter.com/c_plus_c/statuses/325998090656043010">April 21, 2013</a></blockquote>
 
-          <blockquote class="twitter-tweet" data-twitter-extracted-i1619883192843824806="true"><p><a href="http://t.co/5NSYwcugEr">http://t.co/5NSYwcugEr</a>
-置いときますね。</p>— びしぉ〜じぉ (@Nymphium) <a href="https://twitter.com/Nymphium/statuses/384638751999160320">September 30, 2013</a></blockquote>
+          <blockquote class="twitter-tweet"><p><a href="http://t.co/5NSYwcugEr">http://t.co/5NSYwcugEr</a>&#10;置いときますね。</p>&mdash; びしぉ〜じぉ (@Nymphium) <a href="https://twitter.com/Nymphium/statuses/384638751999160320">September 30, 2013</a></blockquote>
 
-          <div class="twitter-tweet twitter-tweet-rendered" style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;"><iframe id="twitter-widget-42" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 550px; height: 193px; display: block; flex-grow: 1;" title="Twitter Tweet" src="./index_files/Tweet(28).html" data-tweet-id="382492224803446784"></iframe></div>
+          <blockquote class="twitter-tweet"><p>学生さん向けのGoogleカレンダーの時間割サービスがある / “TwinCal” <a href="http://t.co/mAFDgeaV5i">http://t.co/mAFDgeaV5i</a></p>&mdash; クロネコ (@96neko) <a href="https://twitter.com/96neko/statuses/382492224803446784">September 24, 2013</a></blockquote>
 
-          <div class="twitter-tweet twitter-tweet-rendered" style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;"><iframe id="twitter-widget-43" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 550px; height: 239px; display: block; flex-grow: 1;" title="Twitter Tweet" src="./index_files/Tweet(29).html" data-tweet-id="387202055909036034"></iframe></div>
+          <blockquote class="twitter-tweet"><p>twincalでgooogleカレンダー同期して、そのデータをエクスポートして時間割アプリに突っ込んだ&#10;詳細はカレンダーで、さっと確認するときは時間割アプリで&#10;goodだ</p>&mdash; arisua4 (@arisua4) <a href="https://twitter.com/arisua4/statuses/387202055909036034">October 7, 2013</a></blockquote>
 
-          <blockquote class="twitter-tweet" data-twitter-extracted-i1619883192843824806="true"><p><a href="https://twitter.com/gam0022_tkb">@gam0022_tkb</a> twincalめっちゃ便利！
-これは良い！時間割アプリあったけど消した！</p>— Shunya Ueta (@hurutoriya) <a href="https://twitter.com/hurutoriya/statuses/392178872801689601">October 21, 2013</a></blockquote>
+          <blockquote class="twitter-tweet"><p><a href="https://twitter.com/gam0022_tkb">@gam0022_tkb</a> twincalめっちゃ便利！&#10;これは良い！時間割アプリあったけど消した！</p>&mdash; Shunya Ueta (@hurutoriya) <a href="https://twitter.com/hurutoriya/statuses/392178872801689601">October 21, 2013</a></blockquote>
 
-          <div class="twitter-tweet twitter-tweet-rendered" style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;"><iframe id="twitter-widget-45" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 550px; height: 239px; display: block; flex-grow: 1;" title="Twitter Tweet" src="./index_files/Tweet(30).html" data-tweet-id="407906372747939840"></iframe></div>
+          <blockquote class="twitter-tweet" lang="ja"><p>これ大学時代欲しかった。ゴイスー / TwinsからGoogleカレンダーやiCalの時間割を作るWebサービス「TwinCal」。教室番号や単位数をKdBから自動取得。 <a href="http://t.co/DWAtBX9czA">http://t.co/DWAtBX9czA</a> <a href="https://twitter.com/search?q=%23twincal&amp;src=hash">#twincal</a> <a href="https://twitter.com/gam0022">@gam0022</a>さんから</p>&mdash; ほんとは超いそがし松 (@himara2) <a href="https://twitter.com/himara2/statuses/407906372747939840">2013, 12月 3</a></blockquote>
 
-          <blockquote class="twitter-tweet" lang="ja" data-twitter-extracted-i1619883192843824806="true"><p>TwinCalすごい。</p>— キョメスケ (@Kyomesuke3) <a href="https://twitter.com/Kyomesuke3/statuses/454200968016449536">April 10, 2014</a></blockquote>
+          <blockquote class="twitter-tweet" lang="ja"><p>TwinCalすごい。</p>&mdash; キョメスケ (@Kyomesuke3) <a href="https://twitter.com/Kyomesuke3/statuses/454200968016449536">April 10, 2014</a></blockquote>
 
-          <div class="twitter-tweet twitter-tweet-rendered" style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;"><iframe id="twitter-widget-47" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 550px; height: 193px; display: block; flex-grow: 1;" title="Twitter Tweet" src="./index_files/Tweet(31).html" data-tweet-id="454156657136644096"></iframe></div>
+          <blockquote class="twitter-tweet" lang="ja"><p>Twincal+スマホがおすすめです　&#10;<a href="http://t.co/9LwiU4ARF6">http://t.co/9LwiU4ARF6</a></p>&mdash; ヤキモチストリーマー (@hid_alma1026) <a href="https://twitter.com/hid_alma1026/statuses/454156657136644096">April 10, 2014</a></blockquote>
 
-          <blockquote class="twitter-tweet" lang="ja" data-twitter-extracted-i1619883192843824806="true"><p>Twincal使って1限の教室で確認すればいいんじゃ</p>— 321-2@夜行性 (@mittyanya_i) <a href="https://twitter.com/mittyanya_i/statuses/454138233975091202">April 10, 2014</a></blockquote>
+          <blockquote class="twitter-tweet" lang="ja"><p>Twincal使って1限の教室で確認すればいいんじゃ</p>&mdash; 321-2@夜行性 (@mittyanya_i) <a href="https://twitter.com/mittyanya_i/statuses/454138233975091202">April 10, 2014</a></blockquote>
 
-          <blockquote class="twitter-tweet" lang="ja" data-twitter-extracted-i1619883192843824806="true"><p>TWINCALいけそう（小並）　<a href="https://twitter.com/search?q=%23itf14_orientation&amp;src=hash">#itf14_orientation</a></p>— すごいあじくんみんなでおごろう (@sadi_gear) <a href="https://twitter.com/sadi_gear/statuses/454138023362322432">April 10, 2014</a></blockquote>
+          <blockquote class="twitter-tweet" lang="ja"><p>TWINCALいけそう（小並）　<a href="https://twitter.com/search?q=%23itf14_orientation&amp;src=hash">#itf14_orientation</a></p>&mdash; すごいあじくんみんなでおごろう (@sadi_gear) <a href="https://twitter.com/sadi_gear/statuses/454138023362322432">April 10, 2014</a></blockquote>
 
-          <div class="twitter-tweet twitter-tweet-rendered" style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;"><iframe id="twitter-widget-50" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 550px; height: 170px; display: block; flex-grow: 1;" title="Twitter Tweet" src="./index_files/Tweet(32).html" data-tweet-id="454137842097070081"></iframe></div>
+          <blockquote class="twitter-tweet" lang="ja"><p>TWINCAL 強い <a href="https://twitter.com/search?q=%23itf14_orientation&amp;src=hash">#itf14_orientation</a></p>&mdash; こば@coins14男子 (@KOBA789) <a href="https://twitter.com/KOBA789/statuses/454137842097070081">April 10, 2014</a></blockquote>
 
-          <blockquote class="twitter-tweet" lang="ja" data-twitter-extracted-i1619883192843824806="true"><p>KDB
-DRIDGE
-TWINCAL
-がお役立ち
-<a href="https://twitter.com/search?q=%23itf14_orientation&amp;src=hash">#itf14_orientation</a></p>— すごいあじくんみんなでおごろう (@sadi_gear) <a href="https://twitter.com/sadi_gear/statuses/454137116532809729">April 10, 2014</a></blockquote>
+          <blockquote class="twitter-tweet" lang="ja"><p>KDB&#10;DRIDGE&#10;TWINCAL&#10;がお役立ち&#10;<a href="https://twitter.com/search?q=%23itf14_orientation&amp;src=hash">#itf14_orientation</a></p>&mdash; すごいあじくんみんなでおごろう (@sadi_gear) <a href="https://twitter.com/sadi_gear/statuses/454137116532809729">April 10, 2014</a></blockquote>
 
-          <blockquote class="twitter-tweet" lang="ja" data-twitter-extracted-i1619883192843824806="true"><p><a href="https://twitter.com/Pierre_Keita">@Pierre_Keita</a> twincalで検索</p>— キー (@kisk0803) <a href="https://twitter.com/kisk0803/statuses/455508921252188160">April 14, 2014</a></blockquote>
+          <blockquote class="twitter-tweet" lang="ja"><p><a href="https://twitter.com/Pierre_Keita">@Pierre_Keita</a> twincalで検索</p>&mdash; キー (@kisk0803) <a href="https://twitter.com/kisk0803/statuses/455508921252188160">April 14, 2014</a></blockquote>
 
-          <div class="twitter-tweet twitter-tweet-rendered" style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;"><iframe id="twitter-widget-53" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 550px; height: 239px; display: block; flex-grow: 1;" title="Twitter Tweet" src="./index_files/Tweet(33).html" data-tweet-id="455497033311199232"></iframe></div>
+          <blockquote class="twitter-tweet" lang="ja"><p>TwinsからGoogleカレンダーやiCalの時間割を作るWebサービス「TwinCal」。教室番号や単位数をKdBから自動取得。 <a href="http://t.co/ziKzfy8zIv">http://t.co/ziKzfy8zIv</a> <a href="https://twitter.com/search?q=%23twincal&amp;src=hash">#twincal</a> <a href="https://twitter.com/gam0022">@gam0022</a>さんから&#10;シラバスを持ち歩くことから解放された。</p>&mdash; 19歳JD(1パコ=2.99ドル) (@nesouda) <a href="https://twitter.com/nesouda/statuses/455497033311199232">April 14, 2014</a></blockquote>
 
-          <blockquote class="twitter-tweet" lang="ja" data-twitter-extracted-i1619883192843824806="true"><p>やるな、TWINCAL</p>— やーすみ氏 (@tkb_sm) <a href="https://twitter.com/tkb_sm/statuses/455452471897255938">April 13, 2014</a></blockquote>
+          <blockquote class="twitter-tweet" lang="ja"><p>やるな、TWINCAL</p>&mdash; やーすみ氏 (@tkb_sm) <a href="https://twitter.com/tkb_sm/statuses/455452471897255938">April 13, 2014</a></blockquote>
 
-          <blockquote class="twitter-tweet" lang="ja" data-twitter-extracted-i1619883192843824806="true"><p>TwinCal便利すぎる。マジで時間割とか部屋とかわかるやん</p>— 谷島拓実 (@coolreikun0105) <a href="https://twitter.com/coolreikun0105/statuses/455345950848872449">April 13, 2014</a></blockquote>
+          <blockquote class="twitter-tweet" lang="ja"><p>TwinCal便利すぎる。マジで時間割とか部屋とかわかるやん</p>&mdash; 谷島拓実 (@coolreikun0105) <a href="https://twitter.com/coolreikun0105/statuses/455345950848872449">April 13, 2014</a></blockquote>
 
-          <div class="twitter-tweet twitter-tweet-rendered" style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;"><iframe id="twitter-widget-56" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 550px; height: 199px; display: block; flex-grow: 1;" title="Twitter Tweet" src="./index_files/Tweet(34).html" data-tweet-id="459480160723402752"></iframe></div>
+          <blockquote class="twitter-tweet" lang="ja"><p>便利　Now Browsing: TwinCal - <a href="http://t.co/4UuphzN7na">http://t.co/4UuphzN7na</a></p>&mdash; なわてぃー (@sakuna63) <a href="https://twitter.com/sakuna63/statuses/459480160723402752">2014, 4月 24</a></blockquote>
 
-          <blockquote class="twitter-tweet" lang="ja" data-twitter-extracted-i1619883192843824806="true"><p>TwinCalまじ神</p>— かんの (@jabi_java_jabi) <a href="https://twitter.com/jabi_java_jabi/statuses/484490271787212800">2014, 7月 3</a></blockquote>
+          <blockquote class="twitter-tweet" lang="ja"><p>TwinCalまじ神</p>&mdash; かんの (@jabi_java_jabi) <a href="https://twitter.com/jabi_java_jabi/statuses/484490271787212800">2014, 7月 3</a></blockquote>
 
           <!--blockquote class="twitter-tweet" lang="ja"><p>iTsukubaは時間割機能強くしていくしかないかと思ったところですごい時間割とかTwinCalの存在を思い出して没になる</p>&mdash; れくにゃん (@xrekkusu) <a href="https://twitter.com/xrekkusu/statuses/459382803251990528">2014, 4月 24</a></blockquote>
 
@@ -382,22 +373,22 @@ TWINCAL
       <div class="well">
         <h4><span class="label label-warning">Q.</span> カレンダーが空で出力される</h4>
         <p><span class="label label-info">A. </span> 原因は色々考えられます。下の3つを確認してください。
-          </p><ol>
+          <ol>
             <li>Twinsでは選択されたモジュールのCSVが出力されるので、目的のモジュールを選択した状態でCSV出力をしてください。</li>
             <li>集中など時間の分からない科目はTwinCalは無視します。</li>
             <li>どうしても解決しない場合は、下の連絡先まで報告すると対応するかもしれません。</li>
           </ol>
-        <p></p>
+        </p>
       </div>
 
       <div class="well">
         <h4><span class="label label-warning">Q.</span> 春Cの時間割を作ろうとしたら、通年の授業が重複して登録される</h4>
         <p><span class="label label-info">A. </span> Twinsで春CのCSVを出力すると通年科目も出力されてしまうのが原因です。好きな方の解決策を試してください。
-          </p><ol>
+          <ol>
             <li>ダウンロードしたCSVをテキストエディタで編集して通年の科目の行を消す。
-              </li><li>カレンダー上で通年の科目を削除する。
-              </li></ol>
-            <p></p>
+              <li>カレンダー上で通年の科目を削除する。
+              </ol>
+            </p>
           </div>
 
           <div class="well">
@@ -459,33 +450,33 @@ TWINCAL
           </div>
           <div class="row">
             <div class="span5 well" id="issues">
-              <a class="close" data-dismiss="alert" href="https://133.130.108.117/app/twincal/#">×</a>
+              <a class="close" data-dismiss="alert" href="#">×</a>
               <p>
                 <span class="label label-warning">Issues</span>
                 何か問題があれば、@gam0022 まで連絡お願いします。
               </p>
-              <p><a class="btn" href="https://twitter.com/gam0022">@gam0022 »</a></p>
+              <p><a class="btn" href="https://twitter.com/gam0022">@gam0022 &raquo;</a></p>
             </div>
             <div class="span5 well" id="info">
-              <a class="close" data-dismiss="alert" href="https://133.130.108.117/app/twincal/#">×</a>
+              <a class="close" data-dismiss="alert" href="#">×</a>
               <p>
                 <span class="label label-info">Info</span>
                 リポジトリを GitHub で公開しています。
               </p>
-              <p><a class="btn" href="https://github.com/gam0022/twincal2">GitHub »</a></p>
+              <p><a class="btn" href="https://github.com/gam0022/twincal2">GitHub &raquo;</a></p>
             </div>
           </div>
         </section>
 
-        <p><iframe id="twitter-widget-58" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" style="position: static; visibility: visible; width: 75px; height: 20px;" title="Twitter Tweet Button" src="./index_files/tweet_button.06c6ee58c3810956b7509218508c7b56.ja.html" data-url="http://gam0022.net/app/twincal/"></iframe>
+        <p><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://gam0022.net/app/twincal/" data-text="TwinsからGoogleカレンダーやiCalの時間割を作るWebサービス「TwinCal」。教室番号や単位数をKdBから自動取得。" data-via="gam0022" data-lang="ja" data-hashtags="twincal">ツイート</a>
           <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p>
 
-        <div class="fb-like fb_iframe_widget" data-href="http://gam0022.net/app/twincal/" data-width="The pixel width of the plugin" data-height="The pixel height of the plugin" data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="true" data-send="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=&amp;color_scheme=light&amp;container_width=1170&amp;href=http%3A%2F%2Fgam0022.net%2Fapp%2Ftwincal%2F&amp;layout=button_count&amp;locale=ja_JP&amp;sdk=joey&amp;send=false&amp;show_faces=true&amp;width=The%20pixel%20width%20of%20the%20plugin"><span style="vertical-align: top; width: 0px; height: 0px; overflow: hidden;"><iframe name="f15b169237290c8" height="1000px" data-testid="fb:like Facebook Social Plugin" title="fb:like Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./index_files/like.html" style="border: none; visibility: visible; width: 0px; height: 0px;"></iframe></span></div>
+        <div class="fb-like" data-href="http://gam0022.net/app/twincal/" data-width="The pixel width of the plugin" data-height="The pixel height of the plugin" data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="true" data-send="false"></div>
 
         <hr>
 
         <footer>
-          <p>Copyright © 2013-2014 がむ(@gam0022)</p>
+          <p>Copyright &copy; 2013-2014 がむ(@gam0022)</p>
         </footer>
 
       </div> <!-- /container -->
@@ -493,24 +484,24 @@ TWINCAL
       <!-- Le javascript
       ================================================== -->
       <!-- Placed at the end of the document so the pages load faster -->
-      <script src="./index_files/bootstrap-transition.js.ダウンロード"></script>
-      <script src="./index_files/bootstrap-alert.js.ダウンロード"></script>
-      <script src="./index_files/bootstrap-modal.js.ダウンロード"></script>
-      <script src="./index_files/bootstrap-dropdown.js.ダウンロード"></script>
-      <script src="./index_files/bootstrap-scrollspy.js.ダウンロード"></script>
-      <script src="./index_files/bootstrap-tab.js.ダウンロード"></script>
-      <script src="./index_files/bootstrap-tooltip.js.ダウンロード"></script>
-      <script src="./index_files/bootstrap-popover.js.ダウンロード"></script>
-      <script src="./index_files/bootstrap-button.js.ダウンロード"></script>
-      <script src="./index_files/bootstrap-collapse.js.ダウンロード"></script>
-      <script src="./index_files/bootstrap-carousel.js.ダウンロード"></script>
-      <script src="./index_files/bootstrap-typeahead.js.ダウンロード"></script>
+      <script src="js/bootstrap-transition.js"></script>
+      <script src="js/bootstrap-alert.js"></script>
+      <script src="js/bootstrap-modal.js"></script>
+      <script src="js/bootstrap-dropdown.js"></script>
+      <script src="js/bootstrap-scrollspy.js"></script>
+      <script src="js/bootstrap-tab.js"></script>
+      <script src="js/bootstrap-tooltip.js"></script>
+      <script src="js/bootstrap-popover.js"></script>
+      <script src="js/bootstrap-button.js"></script>
+      <script src="js/bootstrap-collapse.js"></script>
+      <script src="js/bootstrap-carousel.js"></script>
+      <script src="js/bootstrap-typeahead.js"></script>
 
       <!-- Twitter -->
-      <script async="" src="./index_files/widgets.js.ダウンロード" charset="utf-8"></script>
+      <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
       <!--Facebook-->
-      <div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div>
+      <div id="fb-root"></div>
       <script>(function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
@@ -523,6 +514,5 @@ TWINCAL
       $('#closingModal').modal('show');
     </script>
 
-  
-
-<iframe scrolling="no" frameborder="0" allowtransparency="true" src="./index_files/widget_iframe.06c6ee58c3810956b7509218508c7b56.html" title="Twitter settings iframe" style="display: none;"></iframe><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./index_files/saved_resource.html"></iframe></body></html>
+  </body>
+</html>

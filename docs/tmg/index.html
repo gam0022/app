@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -115,26 +116,41 @@
 
           <div id="selectDesign" class="carousel slide">
             <ol class="carousel-indicators">
-              <% @designs.each_with_index do |item, i| %>
-                <li data-target="#selectDesign" data-slide-to="<%= i %>"></li>
-              <% end %>
+              
+                <li data-target="#selectDesign" data-slide-to="0"></li>
+              
+                <li data-target="#selectDesign" data-slide-to="1"></li>
+              
             </ol>
             <!-- Carousel items -->
             <div class="carousel-inner">
-              <% @designs.each do |item| %>
+              
                 <div class="item">
                   <table align="center">
                     <tr>
-                      <td><a onclick="select_design('<%= item[0] %>');" id="design_a_<%= item[0] %>"><img src="thumbnail_images/<%= item[0] %>.png" width="150px"></a></td>
-                      <td><a onclick="select_design('<%= item[1] %>');" id="design_a_<%= item[1] %>"><img src="thumbnail_images/<%= item[1] %>.png" width="150px"></a></td>
+                      <td><a onclick="select_design('design_a');" id="design_a_design_a"><img src="thumbnail_images/design_a.png" width="150px"></a></td>
+                      <td><a onclick="select_design('simple_a');" id="design_a_simple_a"><img src="thumbnail_images/simple_a.png" width="150px"></a></td>
                     </tr>
                     <tr>
-                      <td><a onclick="select_design('<%= item[2] %>');" id="design_a_<%= item[2] %>"><img src="thumbnail_images/<%= item[2] %>.png" width="150px"></a></td>
-                      <td><a onclick="select_design('<%= item[3] %>');" id="design_a_<%= item[3] %>"><img src="thumbnail_images/<%= item[3] %>.png" width="150px"></a></td>
+                      <td><a onclick="select_design('simple_b');" id="design_a_simple_b"><img src="thumbnail_images/simple_b.png" width="150px"></a></td>
+                      <td><a onclick="select_design('simple_c');" id="design_a_simple_c"><img src="thumbnail_images/simple_c.png" width="150px"></a></td>
                     </tr>
                   </table>
                 </div>
-              <% end %>
+              
+                <div class="item">
+                  <table align="center">
+                    <tr>
+                      <td><a onclick="select_design('design_a_summary');" id="design_a_design_a_summary"><img src="thumbnail_images/design_a_summary.png" width="150px"></a></td>
+                      <td><a onclick="select_design('simple_a_summary');" id="design_a_simple_a_summary"><img src="thumbnail_images/simple_a_summary.png" width="150px"></a></td>
+                    </tr>
+                    <tr>
+                      <td><a onclick="select_design('simple_b_summary');" id="design_a_simple_b_summary"><img src="thumbnail_images/simple_b_summary.png" width="150px"></a></td>
+                      <td><a onclick="select_design('simple_c_summary');" id="design_a_simple_c_summary"><img src="thumbnail_images/simple_c_summary.png" width="150px"></a></td>
+                    </tr>
+                  </table>
+                </div>
+              
             </div>
             <!-- Carousel nav -->
             <a class="carousel-control left" href="#selectDesign" data-slide="prev">&lsaquo;</a>

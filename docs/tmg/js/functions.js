@@ -113,8 +113,7 @@ function apply_screen_name() {
 
   $.get(
       "twitter.json",
-      {"screen_name": screen_name},
-
+      {},
       function(data) {
         if (data == "(´・ω・｀)") {
           $("#alert_screen_name").css('display', 'block');

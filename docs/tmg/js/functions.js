@@ -120,7 +120,7 @@ function apply_screen_name() {
           return;
         }
 
-        var json = json_cached = $.parseJSON(data);
+        var json = json_cached = $.parseJSON(JSON.stringify(data));
         $("#alert_screen_name").css('display', 'none');
         excute_draw(json);
       });

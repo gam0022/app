@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)https://133.130.108.117/app/tmg/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Twitter名刺ジェネレータ</title>
+    <script src="./top_files/jquery-2.0.3.min.js.ダウンロード"></script>
+    <script src="./top_files/draw_functions.js.ダウンロード"></script>
+    <script src="./top_files/functions.js.ダウンロード"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--meta name="viewport" content="width=600"-->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="./top_files/bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link href="./top_files/bootstrap-responsive.css" rel="stylesheet">
+    <link href="./top_files/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://133.130.108.117/app/tmg/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://133.130.108.117/app/tmg/assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://133.130.108.117/app/tmg/assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="https://133.130.108.117/app/tmg/assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="https://133.130.108.117/app/tmg/assets/ico/favicon.png">
+
+    <!-- matrix engine -->
+    <!--meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1" /-->
+  </head>
+
+  <body style="">
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="https://133.130.108.117/app/tmg/#">TMG <small>Twitter Meishi Generator</small></a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="https://133.130.108.117/app/tmg/show.rb"><i class="icon-th-list icon-white"></i> Show</a></li>
+              <li><a href="https://133.130.108.117/app/tmg/#about" data-toggle="modal"><i class="icon-question-sign icon-white"></i> About</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+
+    <!-- About Modal -->
+    <div id="about" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">About</h3>
+      </div>
+      <div class="modal-body">
+
+        <legend>What's this?</legend>
+
+        <p>Twitter ID から簡単に名刺を作成できる Web サービスです。</p>
+
+        <legend>Features</legend>
+
+        <ul>
+          <li>わずか2ステップで簡単作成！</li>
+          <ol>
+            <li>Twitter IDを入力。</li>
+            <li>デザインを選択。</li>
+          </ol>
+          <li>ユーザ認証しなくても使用可能。</li>
+          <li>Canvas を用いた描画により、デザイン選択した瞬間に名刺が作れる！</li>
+          <li>マルコフ連鎖で直近200件のツイートをカオスに要約。</li>
+          <li>完成した名刺は PNG 形式で保存、Twitterで共有できる！</li>
+        </ul>
+
+      </div>
+      <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="span6">
+
+          <h4><a class="btn btn-info">1</a> Twitter ID</h4>
+
+          <form class="form-inline">
+            <input id="screen_name" type="text" placeholder="Twitter ID" value="gam0022" onkeypress="return submitCheck(event);">
+            <button type="button" class="btn" onclick="apply_screen_name()">Apply</button>
+          </form>
+
+          <p id="alert_screen_name" class="alert alert-error" style="display:none;">
+          <a class="close" data-dismiss="alert" href="https://133.130.108.117/app/tmg/#">×</a>
+          ツイートが取得できませんでした。<br>
+          Twitter ID が間違っているか、鍵垢になっているかもしれません。
+          </p>
+
+          <h4><a class="btn btn-info">2</a> Design</h4>
+
+          <div id="selectDesign" class="carousel slide">
+            <ol class="carousel-indicators">
+              
+                <li data-target="#selectDesign" data-slide-to="0" class="active"></li>
+              
+                <li data-target="#selectDesign" data-slide-to="1"></li>
+              
+            </ol>
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+              
+                <div class="item active">
+                  <table align="center">
+                    <tbody><tr>
+                      <td><a onclick="select_design(&#39;design_a&#39;);" id="design_a_design_a" class="active"><img src="./top_files/design_a.png" width="150px"></a></td>
+                      <td><a onclick="select_design(&#39;simple_a&#39;);" id="design_a_simple_a"><img src="./top_files/simple_a.png" width="150px"></a></td>
+                    </tr>
+                    <tr>
+                      <td><a onclick="select_design(&#39;simple_b&#39;);" id="design_a_simple_b"><img src="./top_files/simple_b.png" width="150px"></a></td>
+                      <td><a onclick="select_design(&#39;simple_c&#39;);" id="design_a_simple_c"><img src="./top_files/simple_c.png" width="150px"></a></td>
+                    </tr>
+                  </tbody></table>
+                </div>
+              
+                <div class="item">
+                  <table align="center">
+                    <tbody><tr>
+                      <td><a onclick="select_design(&#39;design_a_summary&#39;);" id="design_a_design_a_summary"><img src="./top_files/design_a_summary.png" width="150px"></a></td>
+                      <td><a onclick="select_design(&#39;simple_a_summary&#39;);" id="design_a_simple_a_summary"><img src="./top_files/simple_a_summary.png" width="150px"></a></td>
+                    </tr>
+                    <tr>
+                      <td><a onclick="select_design(&#39;simple_b_summary&#39;);" id="design_a_simple_b_summary"><img src="./top_files/simple_b_summary.png" width="150px"></a></td>
+                      <td><a onclick="select_design(&#39;simple_c_summary&#39;);" id="design_a_simple_c_summary"><img src="./top_files/simple_c_summary.png" width="150px"></a></td>
+                    </tr>
+                  </tbody></table>
+                </div>
+              
+            </div>
+            <!-- Carousel nav -->
+            <a class="carousel-control left" href="https://133.130.108.117/app/tmg/#selectDesign" data-slide="prev">‹</a>
+            <a class="carousel-control right" href="https://133.130.108.117/app/tmg/#selectDesign" data-slide="next">›</a>
+          </div>
+        </div>
+
+        <div class="span6">
+          <div class="well">
+            <h4><a class="btn btn-success">3</a> Preview</h4>
+
+            <a onclick="save_image()">
+              <canvas id="canvas" width="455" height="275"></canvas>
+            </a>
+
+            <form class="form-inline" method="POST" action="https://133.130.108.117/app/tmg/save.rb" onsubmit="return post_image();">
+              <button type="submit" class="btn btn-primary">Post</button>
+              <input type="hidden" name="image_data" id="image_data" value="empty">
+              <input type="hidden" name="screen_name_hidden" id="screen_name_hidden" value="empty">
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./top_files/bootstrap-transition.js.ダウンロード"></script>
+    <script src="./top_files/bootstrap-alert.js.ダウンロード"></script>
+    <script src="./top_files/bootstrap-modal.js.ダウンロード"></script>
+    <script src="./top_files/bootstrap-dropdown.js.ダウンロード"></script>
+    <script src="./top_files/bootstrap-scrollspy.js.ダウンロード"></script>
+    <script src="./top_files/bootstrap-tab.js.ダウンロード"></script>
+    <script src="./top_files/bootstrap-tooltip.js.ダウンロード"></script>
+    <script src="./top_files/bootstrap-popover.js.ダウンロード"></script>
+    <script src="./top_files/bootstrap-button.js.ダウンロード"></script>
+    <script src="./top_files/bootstrap-collapse.js.ダウンロード"></script>
+    <script src="./top_files/bootstrap-carousel.js.ダウンロード"></script>
+    <script src="./top_files/bootstrap-typeahead.js.ダウンロード"></script>
+
+  
+
+</body></html>

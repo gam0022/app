@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Twitter名刺ジェネレータ</title>
+    <script src="js/jquery-2.0.3.min.js"></script>
+    <script src="js/draw_functions.js"></script>
+    <script src="js/functions.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--meta name="viewport" content="width=600"-->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+    <!-- matrix engine -->
+    <!--meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1" /-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">TMG <small>Twitter Meishi Generator</small></a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="show.rb"><i class="icon-th-list icon-white"></i> Show</a></li>
+              <li><a href="#about" data-toggle="modal"><i class="icon-question-sign icon-white"></i> About</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+
+    <!-- About Modal -->
+    <div id="about" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">About</h3>
+      </div>
+      <div class="modal-body">
+
+        <legend>What's this?</legend>
+
+        <p>Twitter ID から簡単に名刺を作成できる Web サービスです。</p>
+
+        <legend>Features</legend>
+
+        <ul>
+          <li>わずか2ステップで簡単作成！</li>
+          <ol>
+            <li>Twitter IDを入力。</li>
+            <li>デザインを選択。</li>
+          </ol>
+          <li>ユーザ認証しなくても使用可能。</li>
+          <li>Canvas を用いた描画により、デザイン選択した瞬間に名刺が作れる！</li>
+          <li>マルコフ連鎖で直近200件のツイートをカオスに要約。</li>
+          <li>完成した名刺は PNG 形式で保存、Twitterで共有できる！</li>
+        </ul>
+
+      </div>
+      <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="span6">
+
+          <h4><a class="btn btn-info">1</a> Twitter ID</h4>
+
+          <form class="form-inline">
+            <input id="screen_name" type="text" placeholder="Twitter ID" value="gam0022" onKeyPress="return submitCheck(event);">
+            <button type="button" class="btn" onclick="apply_screen_name()">Apply</button>
+          </form>
+
+          <p id="alert_screen_name" class="alert alert-error" style="display:none;">
+          <a class="close" data-dismiss="alert" href="#">×</a>
+          ツイートが取得できませんでした。<br />
+          Twitter ID が間違っているか、鍵垢になっているかもしれません。
+          </p>
+
+          <h4><a class="btn btn-info">2</a> Design</h4>
+
+          <div id="selectDesign" class="carousel slide">
+            <ol class="carousel-indicators">
+              <% @designs.each_with_index do |item, i| %>
+                <li data-target="#selectDesign" data-slide-to="<%= i %>"></li>
+              <% end %>
+            </ol>
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+              <% @designs.each do |item| %>
+                <div class="item">
+                  <table align="center">
+                    <tr>
+                      <td><a onclick="select_design('<%= item[0] %>');" id="design_a_<%= item[0] %>"><img src="thumbnail_images/<%= item[0] %>.png" width="150px"></a></td>
+                      <td><a onclick="select_design('<%= item[1] %>');" id="design_a_<%= item[1] %>"><img src="thumbnail_images/<%= item[1] %>.png" width="150px"></a></td>
+                    </tr>
+                    <tr>
+                      <td><a onclick="select_design('<%= item[2] %>');" id="design_a_<%= item[2] %>"><img src="thumbnail_images/<%= item[2] %>.png" width="150px"></a></td>
+                      <td><a onclick="select_design('<%= item[3] %>');" id="design_a_<%= item[3] %>"><img src="thumbnail_images/<%= item[3] %>.png" width="150px"></a></td>
+                    </tr>
+                  </table>
+                </div>
+              <% end %>
+            </div>
+            <!-- Carousel nav -->
+            <a class="carousel-control left" href="#selectDesign" data-slide="prev">&lsaquo;</a>
+            <a class="carousel-control right" href="#selectDesign" data-slide="next">&rsaquo;</a>
+          </div>
+        </div>
+
+        <div class="span6">
+          <div class="well">
+            <h4><a class="btn btn-success">3</a> Preview</h4>
+
+            <a onclick="save_image()">
+              <canvas id="canvas" width="455" height="275"></canvas>
+            </a>
+
+            <form class="form-inline" method="POST" action="save.rb" onsubmit="return post_image();">
+              <button type="submit" class="btn btn-primary">Post</button>
+              <input type="hidden" name="image_data" id="image_data" value="empty">
+              <input type="hidden" name="screen_name_hidden" id="screen_name_hidden" value="empty">
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,89 @@
+a#navi-left {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 64px; height: 64px;
+  background-image: url("images/other/navi_left.png");
+}
+a#navi-left:hover {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 64px; height: 64px;
+  background-image: url("images/other/navi_left_fover.png");
+}
+
+a#navi-right {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 64px; height: 64px;
+  background-image: url("images/other/navi_right.png");
+}
+a#navi-right:hover {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 64px; height: 64px;
+  background-image: url("images/other/navi_right_fover.png");
+}
+
+
+div.canvas {
+  position: absolute;
+  width: 600px; height: 600px;
+  margin:0; padding:0;
+}
+
+div#caption {
+  width: 350px;
+  font-size: 20px;
+  margin: 0 auto;
+  padding: 5px;
+  text-align: center;
+
+  font-weight: bold;
+  line-height: 26px;
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  white-space: nowrap;
+  vertical-align: baseline;
+  background-color: #999999;
+
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+.maru-kado {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+div.manual>h1, h2, h3, h4, h5, h6 {
+  line-height: 2;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+div.manual>h1 {
+  font-size: 20px;
+  background: #eee;  
+  border-left: 7px solid #777;  
+  margin-top: 50px;
+}
+div.manual>h2 {
+  font-size: 18px;
+  border-left:7px solid #ccc;  
+  border-bottom:1px solid #ccc;
+  margin-top: 40px;
+}
+div.manual>h3 {
+  font-size: 15px;
+  border-left:7px solid #ccc;  
+}
+
+footer {
+  text-align: center;
+}

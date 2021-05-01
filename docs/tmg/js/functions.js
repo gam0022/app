@@ -111,8 +111,8 @@ function apply_screen_name() {
   loading.description = "Now Loading...";
   excute_draw(loading);
 
-  $.post(
-      "twitter.rb",
+  $.get(
+      "twitter.json",
       {"screen_name": screen_name},
 
       function(data) {
